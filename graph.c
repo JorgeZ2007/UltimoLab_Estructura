@@ -33,6 +33,8 @@ Graph* createGraph() {
 void addNode(Graph* g, const char* label) {
     if (!g || !label) return;
 
+    g->adjacencyMap = map_create(is_equal_string);
+
 }
 
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {

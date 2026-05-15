@@ -50,3 +50,18 @@ graph.c:40:25: error: implicit declaration of function ‘search’; did you mea
       |                         bsearch
 graph.c:40:25: error: initialization of ‘MapPair *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
 d22b4cd
+Fri May 15 01:28:54 AM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:40:53: error: passing argument 2 of ‘map_search’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   40 |     MapPair *auxiliar = map_search(g->adjacencyMap, label);
+      |                                                     ^~~~~
+In file included from graph.c:8:
+map.h:22:37: note: expected ‘void *’ but argument is of type ‘const char *’
+   22 | MapPair *map_search(Map *map, void *key);
+      |                               ~~~~~~^~~
+cc1: all warnings being treated as errors
+fcf62ae

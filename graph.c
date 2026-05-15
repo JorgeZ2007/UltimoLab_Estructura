@@ -52,7 +52,7 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     MapPair *auxiliar = map_search(g->adjacencyMap, (void *)src); 
     if(auxiliar == NULL) return;
 
-    Edge *elemento = (Edge *) malloc(sizeof(Edge*)); 
+    Edge *elemento = (Edge *) malloc(sizeof(Edge)); 
     if(elemento == NULL) exit(EXIT_FAILURE); 
 
     elemento->target = strdup(dest); 

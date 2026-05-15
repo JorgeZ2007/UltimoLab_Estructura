@@ -66,7 +66,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
     Edge *elemento = list_first(auxiliar->value); 
 
     while(elemento != NULL){
-        if(is_equal_string((void *) elemento->target, (void *) label2) == 0) return elemento->weight; 
+        if(strcmp((void *) elemento->target, (void *) label2) == 0) return elemento->weight; 
 
         elemento = list_next(auxiliar->value); 
     }

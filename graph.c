@@ -61,7 +61,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
     if (!g || !label1 || !label2) return -1;
 
     MapPair *auxiliar = map_search(g->adjacencyMap, (void *)label1); 
-    if(auxiliar != NULL) return -1;
+    if(auxiliar == NULL) return -1;
 
     Edge *elemento = list_first(auxiliar->value); 
 

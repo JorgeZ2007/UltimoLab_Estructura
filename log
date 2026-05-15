@@ -38,3 +38,15 @@ graph.c:43:19: error: implicit declaration of function ‘strup’; did you mean
       |                   strdup
 graph.c:43:19: error: initialization of ‘char *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
 8f910ec
+Fri May 15 01:28:26 AM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:40:25: error: implicit declaration of function ‘search’; did you mean ‘bsearch’? [-Wimplicit-function-declaration]
+   40 |     MapPair *auxiliar = search(g->adjacencyMap, label);
+      |                         ^~~~~~
+      |                         bsearch
+graph.c:40:25: error: initialization of ‘MapPair *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+d22b4cd

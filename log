@@ -70,3 +70,23 @@ Fri May 15 01:29:32 AM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 ef9a9e3
+Fri May 15 06:42:29 PM UTC 2026: 
+ graph.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:64:26: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   64 |     if(auxiliar != NULL) return;
+      |                          ^~~~~~
+graph.c:60:5: note: declared here
+   60 | int getWeight(Graph* g, const char* label1, const char* label2) {
+      |     ^~~~~~~~~
+graph.c:69:46: error: passing argument 2 of ‘is_equal_string’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   69 |         if(is_equal_string(elemento->target, label2) == 0) return elemento->weight;
+      |                                              ^~~~~~
+graph.c:21:39: note: expected ‘void *’ but argument is of type ‘const char *’
+   21 | int is_equal_string(void *key1, void *key2) {
+      |                                 ~~~~~~^~~~
+cc1: all warnings being treated as errors
+dad0fd5
